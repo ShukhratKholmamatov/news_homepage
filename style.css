@@ -1,0 +1,340 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.container{
+    width: 100%;
+    height: auto;
+    padding: 0px 120px;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.navbar{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo h1{
+    font-family: 'Fraunces', serif;
+    cursor: pointer;
+}
+
+ul{
+    display: flex;
+}
+
+ul .close{
+    display: none;
+}
+
+ul li{
+    margin-left: 40px;
+}
+
+ul li a{
+    color: hsla(240, 100%, 5%, 1);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+ul li a:hover{
+    color: hsla(3, 87%, 64%, 1);
+}
+
+.navbar .menu{
+    display: none;
+}
+
+.row_new{
+    display: flex;
+    width: 100%;
+    height: 65vh;
+}
+
+.row_new .left_new{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 69%;
+    width: 100%;
+}
+
+.row_new .left_new .img_new{
+    width: 100%;
+    flex-basis: 100%;
+    background: url(assets/images/image-web-3-desktop.jpg);
+    background-size: cover;
+    overflow: hidden
+}
+
+.row_new .left_new .img_new .mobile_img{
+    display: none;
+    width: 100%;
+}
+
+.row_new .left_new .description{
+    flex-basis: 5%;
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    font-family: 'Inter', sans-serif;    
+}
+
+.description h1{
+    font-size: 40px;
+    font-weight: 800;
+    flex-basis: 50%;
+    text-align: left;
+}
+
+.half_des{
+    flex-basis: 50%;
+}
+
+.half_des p{
+    font-size: 15px;
+    color: grey;
+}
+
+.half_des button{   
+    margin-top: 30px;
+    width: 50%;
+    height: 30px;
+    border: none;
+    background-color: hsla(3, 87%, 64%, 1);
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.half_des button:hover{
+    background-color: hsla(240, 100%, 5%, 1)
+}
+
+.row_new .right_new{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-basis: 31%;
+    background-color: hsla(240, 100%, 5%, 1);
+    color: #fff;
+    margin-left: 20px;
+    padding: 27px;
+    width: 100%;
+}
+
+.row_new .right_new h2{
+    font-family: 'Inter', sans-serif;
+    color: hsla(36, 75%, 62%, 1);
+}
+
+.row_new .right_new div{
+    margin-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    height: 26%;
+    border-bottom: 1px solid hsla(240, 15%, 33%, 1);
+    cursor: pointer;
+}
+
+.row_new .right_new div h3{
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    transition: .3s;
+}
+
+.row_new .right_new div h3:hover{
+    color: hsla(36, 75%, 62%, 1);
+}
+
+.row_new .right_new div p{
+    color: grey;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.card_news{
+    display: grid;
+    grid-template-columns: 33% 33% auto;
+    margin-top: 30px;
+}
+
+.card_news div{
+    display: flex;
+    height: 100px;
+}
+
+.card_news div .img_des{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 15px;
+}
+
+.card_news div .img_des h2{
+    color: gray;
+    font-family: 'Inter', sans-serif;
+}
+
+.card_news div .img_des h3{
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    font-size: 15px;
+    transition: .3s;    
+}
+
+.card_news div .img_des h3:hover{
+    color: hsla(3, 87%, 64%, 1);
+}
+
+.card_news div .img_des p{
+    color: grey;
+    font-size: 15px;
+}
+
+@media only screen and (max-width:1000px){
+    .container{
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (max-width:750px){
+    .row_new{
+        height: 75vh;
+    }
+
+    .row_new .left_new .img_new .mobile_img{
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width:740px){
+    
+    .navbar ul{
+        display: none;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 0;
+        z-index: 2;
+        float: right;
+        position: fixed;
+        right: 0;
+        width: 70%;
+        margin-top: 650px;
+        height: 100vh;
+        background-color: #fff;
+    }
+
+    .navbar ul .close{
+        display: block;
+        position: fixed;
+        top: 3%;
+        right: 3%;
+        width: 30px;
+        height: 30px;
+    }
+
+    .navbar ul li{
+        display: block;
+        font-size: 30px;
+        text-align: left;
+    }
+
+    .navbar ul li a{
+        text-align: left;
+        margin-left: 0;
+        font-size: 25px;
+        color: black;
+    }
+
+    .navbar .menu{
+        display: block;
+    }
+
+    .row_new {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .card_news{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row_new .left_new .description{
+        flex-direction: column;
+    }
+
+    .row_new .left_new .description h1{
+        font-size: 35px;
+    }
+
+    .half_des p{
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .half_des button{
+        height: 50px;
+        margin-top: 20px;
+    }
+
+    .row_new .right_new{
+        margin-left: 0px;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .card_news div{
+        display: flex;
+        height: 100px;
+        margin-top: 20px;
+    }
+
+    .card_news div img{
+        width: 100px;
+        height: 100px;
+    }
+    
+    .card_news div .img_des{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0 15px;
+        margin-top: 0px;
+    }
+    
+    .card_news div .img_des h2{
+        color: gray;
+        font-family: 'Inter', sans-serif;
+    }
+    
+    .card_news div .img_des h3{
+        font-family: 'Inter', sans-serif;
+        cursor: pointer;
+        font-size: 15px;
+        transition: .3s;    
+    }
+
+}
+
+/* font-family: 'Fraunces', serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Outfit', sans-serif;
+font-family: 'Roboto', sans-serif; */
